@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 const MovieList = props => {
   return (
     <div className="movie-list">
@@ -21,6 +21,12 @@ function MovieDetails({ movie }) {
       <div className="movie-metascore">
         Metascore: <strong>{metascore}</strong>
       </div>
+      <Link to={{
+        pathname:'/movies',
+        state: {
+          // id
+        }
+      }}></Link>
     </div>
   );
 }
