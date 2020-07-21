@@ -14,19 +14,13 @@ function MovieDetails({ movie }) {
   const { title, director, metascore } = movie;
   return (
     <div className="movie-card">
-      <h2>{title}</h2>
+      <h2 >{title}</h2>
       <div className="movie-director">
         Director: <em>{director}</em>
       </div>
       <div className="movie-metascore">
         Metascore: <strong>{metascore}</strong>
       </div>
-      <Link to={{
-        pathname:'/movies',
-        state: {
-          // id
-        }
-      }}></Link>
     </div>
   );
 }
