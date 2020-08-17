@@ -23,7 +23,8 @@ const App = () => {
     }
     getMovies();
   }, []);
-  console.log(movieList)
+
+  
   const addToSavedList = id => {
     // This is stretch. Prevent the same movie from being "saved" more than once
   };
