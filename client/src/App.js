@@ -24,17 +24,23 @@ const App = () => {
     getMovies();
   }, []);
 
-  
+
   const addToSavedList = id => {
     // This is stretch. Prevent the same movie from being "saved" more than once
+    // if (/*ID not on list*/){
+    //   setSaved(saved.push(/*movie object*/))
+    // }
+    // else{
+    //   return saved
+    // }
   };
 
   return (
     <div>
-      <SavedList list={[ /* This is stretch */]} />
+      <SavedList list={saved} />
 
       <Route exact path='/'>
-        <MovieList key={movieList.id} movies={movieList} />
+        <MovieList movies={movieList} />
       </Route>
 
       <Route path='/movies/:id'>
